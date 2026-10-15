@@ -10,52 +10,82 @@
 // --------------------------------------------------
 
 // First, we create a variable for the current scene being displayed
-let currentScene = "backyard";
+let currentScene = "bedroom";
 
 // Then, we create an object that stores the data for each scene,
 const scenes = {
   // See "backyard" for the first example
-  backyard: {
-    title: "Location: Backyard",
-    character: "Interviewee:Grandma",
-    text: "Text: well what I remember happening is that Darcie went inside to play with her pretend kitchen, I heard her neighbor mention he was really hungry, and the dog ran around really quickly",
+  bedroom: {
+    title: "Finally home from school!",
+    image: "Bed.jpg",
+    text: "You just came home from school and lots of work has been loaded up on you from your classes, your kinda stressted out about the things you have to get done. But you can decide to make decisions and actions that would help you feel better mentally that will help achieve your main objctive which is to finish all of your tasks. ",
     // you can choose how many choices to include
     // each choice can have text, an action, and/or nextScene
     choices: [
       {
-        text: "Chase after the dog (-10 HP)",
-        action: function () {
-          updateHealth(-10);
-        },
-        nextScene: "entrance"
+        text: "Drink water (+5 energy, -5 pressure)",
       },
       {
-        text: "Ask about the neighbor",
-        nextScene: "hallway"
+        text: "Eat a snack (+5 energy, -5 pressure)",
       },
       {
-          text: "Pick up the brass key",
-          action: function () {
-            pickUpItem("brass key");
-          },
-          nextScene: "hallway"
-      }
+        text: "Take a break (+5 energy)",
+      },
+      {
+        text: "Take a nap (+10 pressure)",
+      },
+      {
+          text: "Go to the livingroom",
+          nextScene: "livingroom"
+      },
+      {
+          text: "Go outside",
+          nextScene: "outside"
+      },
+        {
+          text: "Go to the kitchen",
+          nextScene: "kitchen"
+      },
+        {
+          text: "Go to the garage",
+          nextScene: "garage"
+      },
     ]
   },
 
-  entrance: {
+  livingroom: {
     title: "Location: Entrance",
-    character: "Interviewee:Neighbor",
+    image: "Interviewee:Neighbor",
     text: "well what I remember...",
     choices: [
       {
-        text: "Ask about the dog",
-        nextScene: "backyard"
+        text: "Watch tv (+5 energy, -5 pressure)",
       },
-         {
-        text: "Ask about the neighbor",
-        nextScene: "hallway"
-      }
+      {
+        text: "Eat a snack (+5 energy, -5 pressure)",
+      },
+      {
+        text: "Take a break (+5 energy)",
+      },
+      {
+        text: "Take a nap (+10 pressure)",
+      },
+      {
+          text: "Go to the bedroom",
+          nextScene: "bedroom"
+      },
+      {
+          text: "Go outside",
+          nextScene: "outside"
+      },
+        {
+          text: "Go to the kitchen",
+          nextScene: "kitchen"
+      },
+        {
+          text: "Go to the garage",
+          nextScene: "garage"
+      },
     ]
   },
 
@@ -110,7 +140,7 @@ const scenes = {
 const sceneTitle = document.getElementById("scene-title");
 const sceneText = document.getElementById("scene-text");
 const choicesContainer = document.getElementById("choices-container");
-const characterName = document.getElementById("character-name");
+const sceneImage = document.getElementById("scene-image");
 
 // Then, we create a function to update the scene,
 function updateScene(sceneName) {
@@ -125,7 +155,7 @@ function updateScene(sceneName) {
   // the appropriate text from the scene object
   sceneTitle.textContent = scene.title;
   sceneText.textContent = scene.text;
-  characterName.textContent = scene.character;
+  sceneImage.src = scene.image;
 
   // Clear the old buttons before creating new ones
   choicesContainer.innerHTML = "";
