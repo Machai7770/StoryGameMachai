@@ -62,10 +62,10 @@ const scenes = {
         text: "Watch tv (+5 energy, -5 pressure)",
       },
       {
-        text: "Eat a snack (+5 energy, -5 pressure)",
+        text: "Talk to your family about your day (-5 energy, -5 pressure)",
       },
       {
-        text: "Take a break (+5 energy)",
+        text: "Play with your dog (-5 energy -5 pressure)",
       },
       {
         text: "Take a nap (+10 pressure)",
@@ -89,7 +89,7 @@ const scenes = {
     ]
   },
 
-  hallway: {
+  outside: {
     title: "The Hallway",
     text: "The hallway is dark and silent.",
     choices: [
