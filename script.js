@@ -54,21 +54,21 @@ const scenes = {
   },
 
   livingroom: {
-    title: "Location: Entrance",
-    image: "Interviewee:Neighbor",
-    text: "well what I remember...",
+    title: "Location: Livingroom",
+    image: "images (2).jpg",
+    text: "You just entered the living room where your family is at. You have multiple choices of what you can do here that will determine how your day will turn out.",
     choices: [
       {
-        text: "Watch tv (+5 energy, -5 pressure)",
+        text: "Watch tv (-5 pressure)",
       },
       {
-        text: "Talk to your family about your day (-5 energy, -5 pressure)",
+        text: "Talk to your family about your day (-5 energy, -2 pressure)",
       },
       {
-        text: "Play with your dog (-5 energy -5 pressure)",
+        text: "Play with your dog (-5 energy -2 pressure)",
       },
       {
-        text: "Take a nap (+10 pressure)",
+        text: "Take a nap (+ 10 Energy +2 pressure)",
       },
       {
           text: "Go to the bedroom",
@@ -91,33 +91,54 @@ const scenes = {
 
   outside: {
     title: "The Hallway",
-    text: "The hallway is dark and silent.",
+    image: "outside.jpg",
+    text: "Your outside trying to take some time outside of the house just clear your head a bit. You have multiple activities you can do.",
     choices: [
       {
-        text: "backyard",
-        nextScene: "lockedDoor"
-      }
-    ]
-  },
-
-   lockedDoor: {
-    title: "The Locked Door",
-    text: "The door handle doesn't move.",
-    choices: [
-      {
-        text: "Try to open it",
-        action: unlockDoor
+        text: "Go for a walk (-5 energy, -2 pressure)",
+       
       },
-      {
-        text: "Go back",
-        nextScene: "backyard"
-      }
+       {
+        text: "Go for a jog (-5 energy, -5 pressure)",
+       
+      },
+
+       {
+        text: "go to the store to buy a drink or food (+5 energy, -1 pressure)",
+       
+      },
+      
+  
+      
     ]
   },
 
-   solution: {
-    title: "The solution",
-    text: "You solved the mystery!",
+   Kitchen: {
+    title: "Kitchen",
+    image: "NNN.avif",
+    text: "You came to the kitchen to most likely get something to drink or eat.",
+    choices: [
+      {
+        text: "Eat a snack (+5 energy, -5 pressure)",
+      },
+       {
+        text: "Get a drink of water (+5 energy)",
+      },
+      
+      {
+        text: "cook a full meal (+10 energy, +5 pressure)",
+      },
+{
+        text: "Do some chores (-5 energy, -10 pressure)",
+      },
+
+    ]
+  },
+
+   Garage: {
+    title: "Garage",
+    image: "garage.jpg",
+    text: "Your in the garage a place where things are stored and your family’s car is in there, theres also things you can do in the garage.",
     
   }
 };
