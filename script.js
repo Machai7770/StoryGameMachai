@@ -54,7 +54,7 @@ const scenes = {
   },
 
   livingroom: {
-    title: "Location: Livingroom",
+    title: "Livingroom",
     image: "images (2).jpg",
     text: "You just entered the living room where your family is at. You have multiple choices of what you can do here that will determine how your day will turn out.",
     choices: [
@@ -90,7 +90,7 @@ const scenes = {
   },
 
   outside: {
-    title: "The Hallway",
+    title: "Outside",
     image: "outside.jpg",
     text: "Your outside trying to take some time outside of the house just clear your head a bit. You have multiple activities you can do.",
     choices: [
@@ -113,7 +113,7 @@ const scenes = {
     ]
   },
 
-   Kitchen: {
+   kitchen: {
     title: "Kitchen",
     image: "NNN.avif",
     text: "You came to the kitchen to most likely get something to drink or eat.",
@@ -135,12 +135,27 @@ const scenes = {
     ]
   },
 
-   Garage: {
-    title: "Garage",
+   garage: {
+    title: "garage",
     image: "garage.jpg",
     text: "Your in the garage a place where things are stored and your family’s car is in there, theres also things you can do in the garage.",
-    
-  }
+     choices: [
+      {
+        text: "Eat a snack (+5 energy, -5 pressure)",
+      },
+       {
+        text: "Get a drink of water (+5 energy)",
+      },
+      
+      {
+        text: "cook a full meal (+10 energy, +5 pressure)",
+      },
+{
+        text: "Do some chores (-5 energy, -10 pressure)",
+      },
+
+    ]
+  },
 };
 
 // --------------------------------------------------
