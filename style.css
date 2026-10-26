@@ -2,9 +2,13 @@ body{
     background-color: lightgreen;
 }
 
-.heading{
-    background-color: lightgreen;
+header{
+
+    background-color: lightblue;
     font-family:cursive;
     text-align: center;
     border: 2px black solid;
+    text-decoration: underline;
+    border-radius: 50px;
 }
+
