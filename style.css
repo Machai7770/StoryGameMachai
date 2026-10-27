@@ -3,12 +3,49 @@ body{
 }
 
 header{
-
     background-color: orange;
+    padding: 30px;
     font-family:cursive;
     text-align: center;
     border: 2px black solid;
     text-decoration: underline;
     border-radius: 50px;
+    margin: 50px;
+  
 }
 
+.card{
+    height: 150px;
+    width: 300px;
+    display: inline-block;
+    background-color: lightgreen;
+    border:1px solid black;
+    margin: 30px;
+    padding: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+#learn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    border-top: 5px solid black;   
+    border-bottom: 5px solid black;
+    padding: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    
+}
+
+#learn2{
+    text-align: center;
+    text-decoration: underline;
+    border: 2px solid black;
+    border-radius: 50px;
+    border-block-width: inherit;
+    padding: 20px;
+    background-color: lightgreen;
+    letter-spacing: 2px;
+
+}
